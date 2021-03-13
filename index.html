@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/style.css">
+        <title>IMI-Mobile</title>
+    </head>
+    <body class="body">
+        <div class="container customContainer">
+            <div class="row selectionDiv">
+              <div class="col title">
+                Welcome to IMI mobile ( Select Level )
+              </div>
+            </div>
+            <div id="levelSelection">
+                <div class="row selection">
+                    <div class="col">
+                        <button class="btn btn btn-secondary" title="easy" onclick="selectMode('easy')">Easy</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn btn-secondary" title="Medium" onclick="selectMode('medium')">Medium</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn btn-secondary" title="Hard" onclick="selectMode('hard')">Hard</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row hide" id="displayTimenScore" >
+                <div class="col">
+                    <div>Timer: <span id="timer">0</span></div>
+                </div>
+                <div class="col">
+                    <div>Score: <span id="score">0</span></div>
+                </div>
+                <div class="col">
+                    <div>High Score: <span id="highScore">0</span></div>
+                </div>
+            </div>
+            <div id="matrix"></div>
+            <div class="row" id="options">
+                <button class="btn btn-primary" type="button" onclick="RestratGame()">Restart</button>
+                <button class="btn btn-danger" type="button" onclick="EndGame()">End</button>
+            </div>    
+            <!--Confirmation Modal: Starts here -->
+            <div id="myModal" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <p id="modalContent"></p>
+                    <div class="row">
+                        <div class="col-6">
+                            <button class="btn btn-primary" type="button" onclick="RestratGame()">Restart</button>
+                        </div>
+                        <div class="col-6">
+                            <button class="btn btn-danger" type="button" onclick="EndGame()">End</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <!--Confirmation Modal: Ends here -->
+          </div>
+    </body>
+    <footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+        <script src="assets/scripts/game.js"></script>
+    </footer>
+</html>
